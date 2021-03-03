@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet" />
+    <link href="./styles/style.css" rel="stylesheet" />
+
+    <title>Chereka Restaurant</title>
+  </head>
+  <body>
+    <header>
+      <div class="social-media">
+       <a href="#"><i class="fab fa-facebook-square"></i></a> 
+       <a href="#"><i class="fab fa-twitter-square"></i></a> 
+       <a href="#"> <i class="fab fa-instagram-square"></i></a> 
+      </div>
+
+      <ul class="menu">
+        <li><a href="#menu">Our Menus</a></li>
+        <li><a href="#slideshow">Our Restaurant</a></li>
+        <li><a href="#footer">About Us</a></li>
+      </ul>
+      <h1>Welcome To</h1>
+      <h1>Chereka Restaurant</h1>
+
+      <div class="image-cover"></div>
+      <video src="./video/promo.mp4" autoplay loop muted></video>
+    </header>
+    <div class="underline">
+      <img
+        src="./images/5668403-underline-design-and-simple-design-hand-drawn-elements-in-png-and-fancy-underline-png-1600_401_preview.png"
+      />
+    </div>
+    <div id="myModal" class="modal">
+      <img class="modal-content" id="img01" />
+      <div id="caption"></div>
+    </div>
+    <h1 class="main-header">Our Menus</h1>
+    <main id="menu">
+      <div class="food-wrapper">
+        <img src="./images/foods/doro_wot_2.jpg" alt="Doro Wot" class="myImg" />
+        <p>Doro Wot</p>
+      </div>
+      <div class="food-wrapper">
+        <img
+          src="./images/foods/gomen_besiga.jpg"
+          alt="Beye Ayenet"
+          class="myImg"
+        />
+        <p>Beye Ayenet</p>
+      </div>
+      <div class="food-wrapper">
+        <img src="./images/foods/kitfo.jpg" alt="Kitefo" class="myImg" />
+        <p>Kitefo</p>
+      </div>
+      <div class="food-wrapper">
+        <img src="./images/foods/tibs.jpg" alt="Special Tibs" class="myImg" />
+        <p>Special Tibs</p>
+      </div>
+      <div class="food-wrapper">
+        <img
+          src="./images/foods/yetsom_firfir.jpg"
+          alt="Yetsom Firfir"
+          class="myImg"
+        />
+        <p>Yetsom Firir</p>
+      </div>
+      <div class="food-wrapper">
+        <img src="./images/foods/kikil.jpg" alt="Kikel" class="myImg" />
+        <p>Kikel</p>
+      </div>
+    </main>
+    <div class="underline">
+      <img
+        src="./images/5668403-underline-design-and-simple-design-hand-drawn-elements-in-png-and-fancy-underline-png-1600_401_preview.png"
+      />
+    </div>
+    <div id="slideshow" class="slideshow-container">
+      <h1>Our Restaurant</h1>
+      <div class="mySlides">
+        <img src="./images/restaurant/the-melusine-1.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides">
+        <img src="./images/restaurant/the-melusine-2.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides">
+        <img src="./images/restaurant/the-melusine-3.jpg" style="width: 100%" />
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <div class="underline">
+      <img
+        src="./images/5668403-underline-design-and-simple-design-hand-drawn-elements-in-png-and-fancy-underline-png-1600_401_preview.png"
+      />
+    </div>
+    <h1 class="footer-header">About Us</h1>
+    <section id="footer">
+      <section class="about">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam delectus
+          eum ut ratione iure in eligendi illo dignissimos impedit. Officiis
+          quod iure ad dolores saepe nemo. Maxime dolor earum corrupti.
+        </p>
+        <h4></h4>
+        <ul>
+          <li class="contact-item">
+            <i class="fas fa-map-marker-alt"></i
+            >&ThinSpace;&ThickSpace;&ThickSpace;Omelda St, Addis Ababa, Ethiopia
+          </li>
+          <li class="contact-item">
+            <i class="fas fa-clock"></i>&ThickSpace;&ThickSpace;From 6:00Am to
+            10:00 pm
+          </li>
+          <li class="contact-item">
+            <i class="fas fa-phone-alt"></i>&ThickSpace;&ThickSpace;0912345678
+          </li>
+        </ul>
+      </section>
+      <section class="managers">
+        <img class="manager-1" src="./images/manager_1.jpg" alt="" />
+        <img class="manager-2" src="./images/manager_2.jpg" alt="" />
+      </section>
+    </section>
+
+    <script>
+      let modal = document.getElementById("myModal");
+      let imgs = document.getElementsByClassName("myImg");
+      let modalImg = document.getElementById("img01");
+      let captionText = document.getElementById("caption");
+      for (const img of imgs) {
+        img.onclick = function () {
+          modal.style.display = "block";
+          modalImg.src = this.src;
+          captionText.innerHTML = this.alt;
+        };
+      }
+      modal.onclick = () => {
+        modal.style.display = "none";
+      };
+
+      //slide shows
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+  </body>
+</html>

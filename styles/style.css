@@ -1,0 +1,344 @@
+@font-face {
+    font-family: Montserrat;
+    src: url("../fonts/montserrat/Montserrat-Regular.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("../fonts/montserrat/Montserrat-Bold.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("../fonts/montserrat/Montserrat-Medium.ttf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("../fonts/montserrat/Montserrat-SemiBold.ttf");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("../fonts/montserrat/Montserrat-Thin.ttf");
+    font-weight: 100;
+}
+
+/*open sans*/
+@font-face {
+    font-family: OpenSans;
+    src: url("../fonts/open_sans/OpenSans-Bold.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url("../fonts/open_sans/OpenSans-Light.ttf");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url("../fonts/open_sans/OpenSans-Regular.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url("../fonts/open_sans/OpenSans-SemiBold.ttf");
+    font-weight: 600;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: OpenSans;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    position: relative;
+    height: 600px;
+}
+
+.social-media {
+    text-align: end;
+    margin-right: 22px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.social-media>a {
+    padding: 10px 0px 0px 10px;
+    font-size: 23px;
+}
+
+
+.menu {
+    text-align: end;
+    margin-right: 10px;
+}
+
+.menu>li {
+    display: inline;
+    padding: 10px;
+    color: white;
+}
+.menu>li:hover {
+    opacity: 0.6;
+}
+
+
+header h1 {
+    text-align: center;
+    color: white;
+}
+
+header h1:first-of-type {
+    margin-top: 200px;
+}
+
+header>video {
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    height: 600px;
+    top: 0;
+    z-index: -2;
+}
+
+.image-cover {
+    height: 600px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    top: 0;
+    z-index: -1;
+}
+
+.underline {
+    text-align: center;
+}
+
+.underline>img {
+    height: 100px;
+}
+.main-header{
+    text-align: center;
+    margin-bottom: 10px;
+}
+main {
+    width: 70%;
+    margin: auto;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 15px;
+
+}
+
+.footer-header {
+    text-align: center;
+    margin-bottom: 5px;
+}
+.food-wrapper {
+    width: 250px;
+    height: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.food-wrapper>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+
+.food-wrapper>p {
+    position: absolute;
+    width: 250px;
+    background-color: black;
+    opacity: 0.7;
+    color: white;
+    padding: 10px;
+    bottom: 0;
+    border-radius: 0px 0px 10px 10px;
+    text-align: center;
+}
+
+#footer {
+    display: flex;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    height: 100%;
+}
+
+.about {
+    width: 60%;
+}
+
+.about>h4 {
+    margin: 10px 0px;
+}
+
+.about>p {
+    font-weight: 400;
+    color: black;
+    opacity: 0.8;
+    text-align: justify;
+}
+
+.about>ul>li {
+    list-style-type: none;
+    margin: 5px 0px;
+    color: black;
+    opacity: 0.8;
+}
+
+.managers {
+    position: relative;
+    width: 40%;
+    padding: 20px;
+    height: 380px;
+}
+
+.managers>img {
+    position: absolute;
+    width: 220px;
+    height: 300px;
+    object-fit: cover;
+
+}
+
+.manager-1 {
+    top: 0;
+}
+
+.manager-2 {
+    top: 80px;
+    right: 10px;
+}
+
+.contact-item {
+    opacity: 0.6 !important;
+}
+
+/*slide show*/
+.slideshow-container {
+    max-width: 80%;
+    position: relative;
+    margin: auto;
+}
+.slideshow-container h1 {
+    text-align: center;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides>img {
+    height: 300px;
+    object-fit: cover;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+/*modal*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 600px;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.modal-content,
+#caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}
